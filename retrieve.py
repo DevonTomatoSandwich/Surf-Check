@@ -186,7 +186,7 @@ def initDaylight():
   if ((not isBeforeTime(startTime, fL_hour, fL_min)) and isBeforeTime(startTime, lL_hour, lL_min)): # day light
     firstTime = startTime.replace(hour=fL_hour, minute=fL_min)
     df['lightColor'] = [day, night, day, current]
-    df['lightStartTime'] = [ # todo test in day
+    df['lightStartTime'] = [
       firstTime, 
       firstTime + day_delta,
       firstTime + day_delta + night_delta,
@@ -202,7 +202,7 @@ def initDaylight():
     if((not isBeforeTime(startTime, lL_hour, lL_min)) and isBeforeTime(startTime, 24, 0)): # arvo night
       firstTime = startTime.replace(hour=lL_hour, minute=lL_min)
     else: # early hours
-      firstTime = startTime - timedelta(hours=fL_hour, minute=fL_min)
+      firstTime = startTime - timedelta(hours=fL_hour, minutes=fL_min)
       firstTime = firstTime.replace(hour=lL_hour, minute=lL_min)
     df['lightColor'] = [night, day, night, current]
     df['lightStartTime'] = [

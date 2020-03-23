@@ -1,6 +1,7 @@
 # Plotting
 import matplotlib as mpl 
 import matplotlib.pyplot as plt
+from matplotlib.dates import date2num
 from matplotlib.lines import Line2D # legend
 from retrieve import currentTime, startTime, finishTime # title and domain
 import matplotlib.dates as mdates # for formatting dates in graph
@@ -8,6 +9,9 @@ import matplotlib.dates as mdates # for formatting dates in graph
 import numpy as np
 from matplotlib.path import Path
 
+# todo dawn/dusk times
+# todo commenting
+# todo github inc # Hsm define from swell forecast # hSig define below # remember comment swell retrieval
 
 # Arrow: arrowUp is the Path of a upward pointing arrow that will be later rotated
 vertices = np.array([ 
@@ -33,7 +37,8 @@ def graph(frames):
   fig, ax = plt.subplots(2, sharex=True)
   fig.suptitle('Kook Check: Port Kembla', size='x-large')
   plt.subplots_adjust(top=0.95, bottom=0.15) # space for title and legend
-  ax[0].xaxis.set_major_formatter(mdates.DateFormatter('%I:%M %p'))
+  for a in ax:
+    a.xaxis.set_major_formatter(mdates.DateFormatter('%I:%M %p'))
   plt.xticks(rotation=45)
   legend_elements = [
     Line2D([0], [0], color='b', lw=4, label='Observed'),
@@ -67,13 +72,13 @@ def graph(frames):
   
   # Daylight plotting
   for index, row in frames['Daylight'].iterrows():
-    ax[0].axvspan(row['lightStartTime'], row['lightFinishTime'], facecolor=row['lightColor'], alpha=0.5)
-    ax[1].axvspan(row['lightStartTime'], row['lightFinishTime'], facecolor=row['lightColor'], alpha=0.5)
+    ax[0].axvspan(date2num(row['lightStartTime']), date2num(row['lightFinishTime']), facecolor=row['lightColor'], alpha=0.5)
+    ax[1].axvspan(date2num(row['lightStartTime']), date2num(row['lightFinishTime']), facecolor=row['lightColor'], alpha=0.5)
 
   # Post formatting
   plt.xlim(startTime, finishTime)
   ax[0].set_ylim(-1, getMaxSpeed(frames)) # ranges
-  ax[1].set_ylim(-0.2, getMaxHeight(frames))
+  # ax[1].set_ylim(-0.2, getMaxHeight(frames))
   ax[0].grid(axis='x') # gridlines must be set after plotting
   ax[1].grid(axis='x')
   fig.canvas.draw() # extra formatting for label text
