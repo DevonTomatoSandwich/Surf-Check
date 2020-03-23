@@ -9,10 +9,6 @@ import matplotlib.dates as mdates # for formatting dates in graph
 import numpy as np
 from matplotlib.path import Path
 
-# todo dawn/dusk times
-# todo commenting
-# todo github inc # Hsm define from swell forecast # hSig define below # remember comment swell retrieval
-
 # Arrow: arrowUp is the Path of a upward pointing arrow that will be later rotated
 vertices = np.array([ 
   [ 0  ,  1],
