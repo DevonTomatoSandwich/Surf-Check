@@ -16,17 +16,17 @@ Surfers arn't as simple as they seem. A keen surfer will check conditions before
 - Current time indicated by cyan line
 - Shows all conditions between 6 hours ago and 18 hours ahead (i.e. 24 hour window)
 
-## how to run
-todo
+## How to run
+[Run using repl](https://repl.it/@billybud/Kook-Check)
+
+note that swell data uses a private url so is empty
 
 ## The techsplination
-
 
 Kook Check is built in python. It requests data in time indexed pandas dataframes and outputs using matplotlib. All data is taken from BOM except first/last light times which is from Sunrise - Sunset 's api (thanks!). See https://sunrise-sunset.org/api. The requested data format is either JSON or CSV. 
 
 
 ## Future
 
-- [ ] write how to run
 - [ ] The code is not published yet but can be ran on repl (see how to run)
 
