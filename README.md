@@ -5,7 +5,7 @@ Python graphs showing surf conditions at Port Kembla (Australia NSW)
 Surfers arn't as simple as they seem. A keen surfer will check conditions before heading out. This means looking at graphs and interpreting data quickly. Some sites like coastal watch and swellnet are effective but graphs can be convuluted by multiple y axes and irrelevant data. Some basic information that you need is the wind and swell data. Some surfers plan ahead for travelling however for a kook stuck in port kembla you only need to know the immediate conditions. This leads to the name 'Kook Check' i.e a place for kooks to check!
 
 ## What does it show?
-![link3](https://github.com/DevonTomatoSandwich/Kook-Check/blob/master/Screen%20Shot%202020-03-23%20at%2011.03.57%20am.png)
+![](https://github.com/DevonTomatoSandwich/Kook-Check/blob/master/readme_pic.png)
 
 
 - Observed wind speed and direction in blue
