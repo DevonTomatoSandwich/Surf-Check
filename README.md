@@ -2,7 +2,7 @@
 Python graphs showing surf conditions at Port Kembla (Australia NSW) 
 
 ## What does it show?
-![](https://github.com/DevonTomatoSandwich/Kook-Check/blob/master/readme_pic.png)
+![](https://github.com/DevonTomatoSandwich/Surf-Check/blob/master/readme_pic.png)
 
 
 - Observed wind speed and direction in blue
@@ -14,13 +14,13 @@ Python graphs showing surf conditions at Port Kembla (Australia NSW)
 - Shows all conditions between 6 hours ago and 18 hours ahead (i.e. 24 hour window)
 
 ## How to run
-[Run using repl](https://repl.it/@billybud/Kook-Check)
+[Run using repl](https://repl.it/@billybud/Surf-Check)
 
 The code for the repl can also be found in the repl folder here
 
 ## The tech
 
-Kook Check is built in python. It requests data in time indexed pandas dataframes and outputs using matplotlib. 
+Surf Check is built in python. It requests data in time indexed pandas dataframes and outputs using matplotlib. 
 Wind data is taken from [BOM](http://www.bom.gov.au/). Swell data is taken from [forecast.waves.nsw.gov.au](forecast.waves.nsw.gov.au). 
 First/last light times are from [Sunrise - Sunset 's api](https://sunrise-sunset.org/api) (thanks!). The requested data format is either JSON or CSV.
 
