@@ -11,12 +11,28 @@ Python graphs showing surf conditions at Port Kembla (Australia NSW)
 - Forecast swell height and direction in red
 - First/last light in yellow/purple transition
 - Current time indicated by cyan line
-- Shows all conditions between 6 hours ago and 18 hours ahead (i.e. 24 hour window)
+- Shows all conditions between 6 hours ago and 18 hours ahead (i.e. 24 hour window). Can be changed in config.json
+
+## Code Structure
+
+All the python code is in `surf_check.ipynb`. This file retrieves data from various sources and graphs the chart in the final cell.
+
+Timezone, time domain and location are specified in `config.json`.
+
+A map of compass direction to bearing ° TNorth of motion direction is specified in `directions.json`.
+
+Coordinates for the downward pointng arrow marker are specified in `arrow.csv`.
 
 ## How to run
-[Run using repl](https://repl.it/@billybud/Surf-Check)
 
-The code for the repl can also be found in the repl folder here
+Install the classic Jupyter Notebook with:
+
+`pip install notebook`
+
+To run the notebook:
+
+`jupyter notebook`
+
 
 ## The tech
 
@@ -26,11 +42,5 @@ First/last light times are from [Sunrise - Sunset 's api](https://sunrise-sunset
 
 ## Why?
 Surfers arn't as simple as they seem. A keen surfer will check conditions before heading out. 
-This means looking at graphs and interpreting data quickly. Some sites like coastal watch and swellnet 
-are effective but graphs can be convuluted by multiple y axes and irrelevant data. 
+This means looking at graphs and interpreting data quickly. Some sites like coastal watch and swellnet are effective but graphs can be convoluted by multiple y axes and irrelevant data. 
 Some basic information that you need is the wind and swell data.
-
-## Future
-
-- [ ] The code is not published yet but can be ran on repl (see how to run)
-
